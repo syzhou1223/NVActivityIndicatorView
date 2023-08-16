@@ -33,7 +33,7 @@ class NVActivityIndicatorAnimationBallScaleMultiple: NVActivityIndicatorAnimatio
     func setUpAnimation(in layer: CALayer, size: CGSize, color: UIColor) {
         let duration: CFTimeInterval = 1
         let beginTime = CACurrentMediaTime()
-        let beginTimes = [0, 0.2, 0.4]
+        let beginTimes = [0, 0.4, 8]
 
         // Scale animation
         let scaleAnimation = CABasicAnimation(keyPath: "transform.scale")
@@ -46,7 +46,7 @@ class NVActivityIndicatorAnimationBallScaleMultiple: NVActivityIndicatorAnimatio
         let opacityAnimation = CAKeyframeAnimation(keyPath: "opacity")
 
         opacityAnimation.duration = duration
-        opacityAnimation.keyTimes = [0, 0.05, 1]
+        opacityAnimation.keyTimes = [0, 0.1, 1]
         opacityAnimation.values = [0, 1, 0]
 
         // Animation
